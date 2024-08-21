@@ -1,0 +1,323 @@
+.MuiChartsTooltip-text,
+.MuiChartsLegend-label,
+text {
+    fill: white !important; 
+}
+.MuiChartsAxis-label,
+.MuiChartsAxis-tickLabel {
+    fill: white !important;
+}
+.MuiChartsLegend-root {
+    color: white !important;
+}
+
+.MuiChartsAxis-label, text {
+  padding-right: 20px; /* Adjust padding as needed */
+}
+
+
+.budgetingtool{
+  display: flex;
+  background-image: linear-gradient(60deg, #171c22 0%, #0b1219 100%);
+  background-size: cover;
+  width: 100vw;
+  color: white;
+}
+
+.dashboard{
+  display: flex;
+  flex-direction: column;
+  margin: 2rem;
+  margin-top: 8rem;
+  gap: 2rem;
+  width: 100%;
+  height: max-content;
+  padding: 1rem;
+}
+
+.piegau{
+  display: flex;
+  gap: 1rem;
+}
+
+
+.graphrep{
+  display: flex;
+  gap: 1rem;
+}
+
+.barGraph{
+  outline: 1px solid rgba(255, 255, 255, 0.458);
+  box-shadow: 0px 0px 2px 2px #2b9daa;
+}
+
+.lineGraph{
+  outline: 1px solid rgba(255, 255, 255, 0.458);
+  box-shadow: 0px 0px 2px 2px #2b9daa;
+}
+
+
+.expensedetails{
+  display: flex;
+  gap: 1rem;
+  width: 100%;
+}
+
+.boxes{
+  outline: 1px solid rgba(255, 255, 255, 0.384);
+  padding: 2rem;
+  width: 33%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0px 0px 2px 2px #1f6f78;
+}
+
+.amount{
+  display: flex;
+  gap: 0.2rem;
+  width: 100%;
+  outline: 1px solid rgba(255, 255, 255, 0.384);
+}
+
+.symbol{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-right: 1px solid rgba(255, 255, 255, 0.384);
+}
+
+.figure{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.chartboxes{
+  outline: 1px solid rgba(255, 255, 255, 0.384);
+  height: 100%;
+  width: 100%;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 0px 2px 2px #1f6f78;
+}
+
+.table{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.5rem;
+  /* padding: 1.5rem; */
+  width: 100%;
+  height: max-content;
+}
+
+.tableheader{
+  display: flex;
+  justify-content: space-between;
+}
+
+.tableEditor{
+  display: flex;
+  gap: 1rem;
+  padding: 0.2rem;
+}
+
+.Re{
+  background-color: red;
+}
+
+.Ad{
+  background-image: linear-gradient(60deg, #171c22 0%, #0b1219 100%);
+  outline: 1px solid rgba(255, 255, 255, 0.384);
+  box-shadow: 0px 0px 2px 2px #1f6f78;
+  transition: background-image box-shadow 3s;
+}
+
+.Ad:hover{
+  cursor: pointer;
+  background-image: linear-gradient(60deg, #1f6f78 0%, #1f6f78 100%);
+  box-shadow: none;
+  outline: none;
+}
+
+.Re{
+  cursor: pointer;
+}
+
+.tableEditorButtons{
+  border: none;
+  color: white;
+  font-size: medium;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+
+
+.tab{
+  border-radius: 1rem;
+}
+
+tr{
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  color: white;
+  outline: 1px solid rgba(255, 255, 255, 0.458);
+  box-shadow: 0px 0px 2px 2px #1f6f78;
+  border-radius: 0.1rem;
+}
+
+td, th{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  padding: 1rem;
+}
+
+tr:hover{
+  cursor: pointer;
+  background-image: linear-gradient(60deg, #323d4b8f 0%, #33495e97 100%);
+}
+
+.expenseformback{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  background-color: #0b121992;
+  backdrop-filter: blur(5px);
+  z-index: 2;
+  justify-content: center;
+  align-items: center;
+}
+
+.expenseForm{
+  position: relative;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.5rem;
+  width: 25vw;
+  height: max-content;
+  backdrop-filter: blur(9px);
+  border: none;
+  outline: 1px solid white;
+  box-shadow: 0px 0px 3px 3px #b07d2676;
+}
+
+.expenseFormHeader{
+  display: flex;
+  justify-content: space-between;
+}
+
+.productName{
+  width: 100%;
+  padding: auto;
+}
+
+.amount{
+  width: 100%;
+  padding: auto;
+}
+
+.categorySelection{
+  position: relative;
+}
+
+.optionsLabel{
+  display: flex;
+  justify-content: space-between;
+  outline: 1px solid rgba(255, 255, 255, 0.458);
+  padding: 0.5rem;
+  border-radius: 0.3rem;
+  margin-bottom: 0.5rem;
+  transition: box-shadow background-color 0.3s;
+}
+
+.optionsLabel:hover{
+  background-color: #22282fd8;
+}
+
+.optionsLabel:focus{
+  background-color: #22282f;
+  box-shadow: 0px 0px 3px 2px #2b9daa;
+}
+
+
+
+.formInput:focus{
+  box-shadow: 0px 0px 3px 2px #2b9daa;
+  background-color: #22282f;
+}
+
+.optionsLabel:hover{
+  cursor: pointer;
+}
+
+.catOptions{
+  position: absolute;
+  width: 100%;
+  left: 0;
+  box-sizing: border-box;
+  background-color: #22282f;
+  backdrop-filter: blur(1000px);
+  outline: 1px solid rgba(255, 255, 255, 0.458);
+  padding: 0.5rem;
+  border-radius: 0.3rem;
+  overflow-y: auto;
+  height: 100%;
+}
+
+ul{
+  padding: 0;
+}
+
+li{
+  list-style-type: none;
+  padding: 0.5rem;
+}
+
+li:hover{
+  cursor: pointer;
+  background-color: #0b121992;
+  border-radius: 0.3rem;
+}
+
+.newExpense{
+  padding: 0.5rem;
+  background-color: #0b1219;
+  color: white;
+  border: none;
+  outline: px solid rgba(255, 255, 255, 0.458);
+  box-shadow: 0px 0px 3px 2px #2b9daa;
+  font-weight: bold;
+  font-size: large;
+  transition: background-color 0.3s;
+}
+
+.newExpense:hover{
+  cursor: pointer;
+  background-color: #18a38e;
+  box-shadow: 0px 0px 3px 2px #0b121992;
+}
+
+.closeBtn{
+  transition: box-shadow  0.3s, background-color 0.3s;
+}
+
+.closeBtn:hover{
+  cursor: pointer;
+  box-shadow: 0px 0px 3px 2px #ff0000c6;
+  background-color: #ff00005b;
+}

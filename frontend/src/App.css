@@ -1,0 +1,131 @@
+.mainapp{
+  display: flex;
+}
+
+.sb{
+  position: fixed;
+  z-index: 3;
+}
+
+.app{
+  display: flex;
+  flex-direction: column;
+  background-color: #f9fef6;
+}
+
+.nav{
+  position: fixed;
+  width: 100%;
+  /* margin-top: 0; */
+  z-index: 2;
+  border-bottom: 5px solid #3baea0;
+  box-shadow: 0px 0px 3px 2px #1f6f78;
+}
+
+.indeximage{
+  margin-top: 7rem;
+}
+.financeimage{
+  width: 100%;
+  height: 40vh;
+}
+
+
+
+.content1{
+  display: flex;
+  justify-content: center;
+  padding-left: 16rem;
+  padding-right: 15rem;
+  gap: 80px;
+  margin-top: 5rem;
+  height: max-content;
+}
+
+.content2{
+  display: flex;
+  justify-content: center;
+  padding-left: 16rem;
+  padding-right: 15rem;
+  gap: 80px;
+  margin-top: 5rem;
+  height: max-content;
+}
+
+.content3{
+  display: flex;
+  justify-content: center;
+  padding-left: 16rem;
+  padding-right: 15rem;
+  gap: 80px;
+  margin-top: 5rem;
+  height: max-content;
+}
+
+.savimage{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem;
+  height: max-content;
+}
+
+.savingsimage1{
+  width: 430px;
+  height: 380px;
+  border-radius: 50%;
+  z-index: 1;
+  position: absolute;
+  left: 10px;
+  top: 3px;
+}
+
+.savingsimage2{
+  width: 430px;
+  height: 380px;
+  border-radius: 50%;
+  z-index: 1;
+  position: absolute;
+  right: 10px;
+  bottom: 3px;
+}
+
+.imgshadow{
+  width: 430px;
+  height: 380px;
+  border-radius: 50%;
+  z-index: 0;
+  background-color: #3baea0;
+  position: relative;
+}
+
+.savingscontent{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: max;
+  gap: 30px;
+}
+
+.savebtndiv{
+  width: 100%;
+  display: flex;
+}
+
+.savebtn{
+  padding: 0.8rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  background-color: #3baea0;
+  color: white;
+  font-size: 18px;
+  border: none;
+  border-radius: 0.5rem;
+  transition: 0.3s;
+}
+
+.savebtn:hover{
+  background-color: #1f6f78;
+  cursor: pointer;
+}
