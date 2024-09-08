@@ -63,6 +63,10 @@ export default function Navbar(){
         setA('featurebtnsselected A')
         Navi('/about')
     }
+    const aiassistantHandler=()=>{
+        setA('')
+        Navi('/aiassistant')
+    }
     const signupHandler=()=>{
         Navi('/signup')      
     }
@@ -80,6 +84,7 @@ export default function Navbar(){
                 <button className={classnameB}  onClick={expenseHandler }>Budgeting tool</button>
                 <button className={classnameI} onClick={investHandler}>Investment</button>
                 <button className={classnameA} onClick={aboutHandler}>About us</button>
+                <button className={classnameA} onClick={aiassistantHandler}>AI Assistant</button>
             </div>
             
             <div className={logged?"loggeduser":"useraccount"}>
