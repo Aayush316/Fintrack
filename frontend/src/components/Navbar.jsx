@@ -16,6 +16,7 @@ export default function Navbar(){
     const[classnameB,setB]=useState('featurebtns B')
     const[classnameI,setI]=useState('featurebtns I')
     const[classnameA,setA]=useState('featurebtns A')
+    const[classnameAA,setAA]=useState('featurebtns AA')
 
     useEffect(()=>{
         const token=localStorage.getItem('authToken')
@@ -64,7 +65,7 @@ export default function Navbar(){
         Navi('/about')
     }
     const aiassistantHandler=()=>{
-        setA('')
+        setAA('featurebtnsselected AA')
         Navi('/aiassistant')
     }
     const signupHandler=()=>{
@@ -84,7 +85,7 @@ export default function Navbar(){
                 <button className={classnameB}  onClick={expenseHandler }>Budgeting tool</button>
                 <button className={classnameI} onClick={investHandler}>Investment</button>
                 <button className={classnameA} onClick={aboutHandler}>About us</button>
-                <button className={classnameA} onClick={aiassistantHandler}>AI Assistant</button>
+                <button className={classnameAA} onClick={aiassistantHandler}>AI Assistant</button>
             </div>
             
             <div className={logged?"loggeduser":"useraccount"}>

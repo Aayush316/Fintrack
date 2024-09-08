@@ -76,6 +76,10 @@
     width: 90px;
 }
 
+.AA{
+    width: 90px;
+}
+
 .featurebtns:hover{
     display: flex;
     justify-content: center;
