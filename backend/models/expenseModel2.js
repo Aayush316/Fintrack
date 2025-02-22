@@ -25,7 +25,7 @@ const expenseSchema = new mongoose.Schema({
         type: String,
         enum: ["Entertainment", "Clothing", "Food", "Miscellaneous"]
     },
-    budget: {
+    income: {
         type: Number,
         required: true
     },
