@@ -6,6 +6,8 @@ const{submitExpense, getExpense}=require('../controllers/expenseController')
 const{createAcc, loginAcc, getUser, verifyToken}=require('../controllers/authenticationController')
 const{savingsPlanRoute}=require('../controllers/savingsPlanRoute')
 
+const { getUserBudgetCategories, addBudgetCategory, deleteBudgetCategory } = require("../controllers/budgetController");
+
 router.post('/newexpense', submitExpense)
 router.get('/getexpenses/:userEmail', getExpense)
 router.post('/createaccount', createAcc)
@@ -14,5 +16,8 @@ router.post('/verifytoken', verifyToken)
 router.get('/getuser/:email', getUser)
 router.post('/savings', savingsPlanRoute);
 
+router.get("/budgetCategories/:email", getUserBudgetCategories); // Fetch budget categories for a user by email
+router.post("/newbudgetcategory", addBudgetCategory);
+router.delete("/:id", deleteBudgetCategory);
 
 module.exports=router

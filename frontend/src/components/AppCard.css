@@ -1,0 +1,37 @@
+.AppCard {
+    background-color: white;
+    box-shadow: 0 0 10px 1px gray;
+    padding: 2vw 3vw;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin: 1vh;
+    height: 300px;
+    max-width: 300px;
+  }
+  
+  .image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .personImg {
+    width: 80px;
+    height: 80px;
+  }
+  
+  .name {
+    color: black;
+    font-weight: 600;
+    font-size: 1.5vw;
+  }
+  
+  .description {
+    color: gray;
+    font-weight: 500;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  

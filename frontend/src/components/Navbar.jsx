@@ -7,8 +7,6 @@ import { FaUser } from "react-icons/fa6";
 
 export default function Navbar(){
 
-    
-
     const{logged,nameUser,setUserToken,handleLogged, handleLoggedOut}=useContext(Context)
     const[logoClicked,setLogoClicked]=useState(false)
     const[classnameH,setH]=useState('featurebtns')
@@ -79,39 +77,41 @@ export default function Navbar(){
             <div className="logo">
                 <img className="logoimage" src="https://img.freepik.com/premium-vector/financial-chart-logo-design-template-vector-simple-illustration-logo-financial-company_698214-33.jpg" alt="" />
             </div>
-            <div className="features">
-                <button className={classnameH} onClick={homeHandler}>Home</button>
-                <button className={classnameL} onClick={learnHandler}>Learn</button>
-                <button className={classnameB}  onClick={expenseHandler }>Budgeting tool</button>
-                <button className={classnameI} onClick={investHandler}>Investment</button>
-                <button className={classnameA} onClick={aboutHandler}>About us</button>
-                <button className={classnameAA} onClick={aiassistantHandler}>AI Assistant</button>
-            </div>
-            
-            <div className={logged?"loggeduser":"useraccount"}>
-               {logged ?
-               <>
-               <p className="welcome">Welcome {nameUser}</p>
-               <div onClick={logoClickHandler} className="userlogo" style={{boxShadow:"0px 0px 2px 3px #1f6f78",backgroundColor:'#dfd3c3', color:'white', display:'flex', justifyContent:'center', alignItems:'center', padding:'1rem', borderRadius:'50%'}}>
-               <FaUser></FaUser>
-               </div>
-               </>
-                :
-                <> <button className="useraccbtns" onClick={signupHandler}>Sign Up</button>
-                <button className="useraccbtns" onClick={loginHandler}>Login</button> </>
-                }
-            </div>
-            {logoClicked?
-            <div className="logoutbtns">
+            <div className="navBtns">
+                <div className="features">
+                    <button className={classnameH} onClick={homeHandler}>Home</button>
+                    <button className={classnameL} onClick={learnHandler}>Learn</button>
+                    <button className={classnameB}  onClick={expenseHandler }>Budgeting tool</button>
+                    <button className={classnameI} onClick={investHandler}>Investment</button>
+                    <button className={classnameA} onClick={aboutHandler}>About us</button>
+                    <button className={classnameAA} onClick={aiassistantHandler}>AI Assistant</button>
+                </div>
+                
+                <div className={logged?"loggeduser":"useraccount"}>
+                {logged ?
+                <>
+                <p className="welcome">Welcome {nameUser}</p>
+                <div onClick={logoClickHandler} className="userlogo" style={{boxShadow:"0px 0px 2px 3px #1f6f78",backgroundColor:'#dfd3c3', color:'white', display:'flex', justifyContent:'center', alignItems:'center', padding:'1rem', borderRadius:'50%'}}>
+                <FaUser></FaUser>
+                </div>
+                </>
+                    :
+                    <> <button className="useraccbtns" onClick={signupHandler}>Sign Up</button>
+                    <button className="useraccbtns" onClick={loginHandler}>Login</button> </>
+                    }
+                </div>
+                {/* {logoClicked?
+                <div className="logoutbtns">
                 <button className="logooubuttons" onClick={logoutHandler}>Logout</button>
                 <button className="logooubuttons">Settings</button>
-            </div>
-            :
-            <div className="logoutbtns2">
-            <button className="logooubuttons" onClick={logoutHandler}>Logout</button>
-            <button className="logooubuttons">Settings</button>
-        </div>}
+                </div>
+                :
+                <div className="logoutbtns2">
+                <button className="logooubuttons" onClick={logoutHandler}>Logout</button>
+                <button className="logooubuttons">Settings</button>
+                </div>} */}
 
+            </div>
         </div>
     )
 }

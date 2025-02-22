@@ -10,7 +10,7 @@ export default function ContextProvider({children}){
             name:"Course1",
             instructor:'Course1 Instructor',
             price:'course1 price',
-            description:'amkxmjkbkcbshjavjhabj<vjhbavakvamkxmjkbkcbshjavjhabj<vjhbavakvamkxmjkbkcbshjavjhabj<vjhbavakvamkxmjkbkcbshjavjhabj<vjhbavakv  ',
+            description: "amkxmjkbkcbs  hjavjhabj<vjhbav akvamkxmjkbkc bshjavjhabj<vjhbavakv amkxmjkbkcbshjav jhabj<vjhbavakvamkxmjk bkcbshjavjhabj <vjhbavakv ",
         },
         {
             id:2,
@@ -18,7 +18,7 @@ export default function ContextProvider({children}){
             name:"Course2",
             instructor:'Course2 Instructor',
             price:'course2 price',
-            description:'amkxmjkbkcbshjavjhabj<vjhbavakvamkxmjkbkcbshjavjhabj<vjhbavakvamkxmjkbkcbshjavjhabj<vjhbavakvamkxmjkbkcbshjavjhabj<vjhbavakv  ',
+            description: "amkxmjkbkcbs  hjavjhabj<vjhbav akvamkxmjkbkc bshjavjhabj<vjhbavakv amkxmjkbkcbshjav jhabj<vjhbavakvamkxmjk bkcbshjavjhabj <vjhbavakv ",
         },
         {
             id:3,
@@ -26,7 +26,7 @@ export default function ContextProvider({children}){
             name:"Course3",
             instructor:'Course3 Instructor',
             price:'course3 price',
-            description:'amkxmjkbkcbshjavjhabj<vjhbavakvamkxmjkbkcbshjavjhabj<vjhbavakvamkxmjkbkcbshjavjhabj<vjhbavakvamkxmjkbkcbshjavjhabj<vjhbavakv  ',
+            description: "amkxmjkbkcbs  hjavjhabj<vjhbav akvamkxmjkbkc bshjavjhabj<vjhbavakv amkxmjkbkcbshjav jhabj<vjhbavakvamkxmjk bkcbshjavjhabj <vjhbavakv ",
         },
         {
             id:4,
@@ -34,7 +34,7 @@ export default function ContextProvider({children}){
             name:"Course4",
             instructor:'Course4 Instructor',
             price:'course4 price',
-            description:'amkxmjkbkcbshjavjhabj<vjhbavakvamkxmjkbkcbshjavjhabj<vjhbavakvamkxmjkbkcbshjavjhabj<vjhbavakvamkxmjkbkcbshjavjhabj<vjhbavakv  ',
+            description: "amkxmjkbkcbs  hjavjhabj<vjhbav akvamkxmjkbkc bshjavjhabj<vjhbavakv amkxmjkbkcbshjav jhabj<vjhbavakvamkxmjk bkcbshjavjhabj <vjhbavakv ",
         },
         {
             id:5,
@@ -42,8 +42,24 @@ export default function ContextProvider({children}){
             name:"Course5",
             instructor:'Course5 Instructor',
             price:'course5 price',
-            description:'amkxmjkbkcbshjavjhabj<vjhbavakvamkxmjkbkcbshjavjhabj<vjhbavakvamkxmjkbkcbshjavjhabj<vjhbavakvamkxmjkbkcbshjavjhabj<vjhbavakv  ',
-        }
+            description: "amkxmjkbkcbs  hjavjhabj<vjhbav akvamkxmjkbkc bshjavjhabj<vjhbavakv amkxmjkbkcbshjav jhabj<vjhbavakvamkxmjk bkcbshjavjhabj <vjhbavakv ",
+        },
+        {
+            id:6,
+            img:'https://cdn.elearningindustry.com/wp-content/uploads/2020/08/5-ways-to-improve-your-course-cover-design-1024x575.png',
+            name:"Course6",
+            instructor:'Course6 Instructor',
+            price:'course6 price',
+            description: "amkxmjkbkcbs  hjavjhabj<vjhbav akvamkxmjkbkc bshjavjhabj<vjhbavakv amkxmjkbkcbshjav jhabj<vjhbavakvamkxmjk bkcbshjavjhabj <vjhbavakv ",
+        },
+        {
+            id:7,
+            img:'https://cdn.elearningindustry.com/wp-content/uploads/2020/08/5-ways-to-improve-your-course-cover-design-1024x575.png',
+            name:"Course7",
+            instructor:'Course7 Instructor',
+            price:'course7 price',
+            description: "amkxmjkbkcbs  hjavjhabj<vjhbav akvamkxmjkbkc bshjavjhabj<vjhbavakv amkxmjkbkcbshjav jhabj<vjhbavakvamkxmjk bkcbshjavjhabj <vjhbavakv ",
+        },
     ]
     const[logged,setLogged]=useState(false)
     const[nameUser,setNameUser]=useState('')

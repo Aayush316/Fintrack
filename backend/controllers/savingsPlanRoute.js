@@ -1,5 +1,14 @@
+const express = require('express');
+const bodyParser = require('body-parser');
 const { GoogleGenerativeAI } = require('@google/generative-ai');
-const genAI = new GoogleGenerativeAI(process.env.GOOGLE_API_KEY);
+const cors=require('cors')
+
+const app = express();
+app.use(bodyParser.json());
+app.use(cors());
+
+// Initialize the Google Generative AI client
+const genAI = new GoogleGenerativeAI('AIzaSyCN5juI0RblO3PoQmVCcMdGgOJAv1Quu3o');
 const model = genAI.getGenerativeModel({ model: 'gemini-1.5-flash' });
 
 exports.savingsPlanRoute= async (req, res) => {
@@ -16,7 +25,7 @@ exports.savingsPlanRoute= async (req, res) => {
         savingsRatio,
     } = req.body;
 
-    // Construct the prompt for the Gemini LLM
+    // Construct a prompt for the Gemini LLM
     const prompt = `
     The customer has a monthly income of ${income}, monthly expenses of ${expenses}, and has the following goals: ${goals}. 
     They currently have ${currentSavings} in savings and ${investments} in investments. 
@@ -27,7 +36,7 @@ exports.savingsPlanRoute= async (req, res) => {
     `;
 
     try {
-        // Generate content using the Gemini model
+        // Generate content using Gemini model
         const result = await model.generateContent(prompt);
         const savingsPlan = result.response.text();
         res.json({ savingsPlan });
@@ -36,3 +45,4 @@ exports.savingsPlanRoute= async (req, res) => {
         res.status(500).json({ message: 'Error generating savings plan', error: error.message });
     }
 };
+

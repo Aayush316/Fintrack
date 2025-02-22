@@ -1,72 +1,71 @@
 .card{
     display: flex;
-    background-color: #e0f0ee5f;
-    /* backdrop-filter: blur(10px); */
-    gap: 20px;
-    width: 50vw;
-    padding: 1rem;
-    border-radius: 1rem;
-    box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.21);
-    outline: 1px solid rgba(0, 0, 0, 0.264);
-    transition: 0.2s;
-    font-family: 'Exo 2'
+    flex-direction: column;
+    outline: 1px solid rgba(128, 128, 128, 0.282);
+    width: 30%;
+    box-sizing: border-box;
+    gap: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 5px 1px rgba(128, 128, 128, 0.632);
 }
 
 .card:hover{
+    .coursebtns{
+        visibility: visible;
+    }
+
+    .lineDiv{
+        visibility: visible;
+    }
     cursor: pointer;
-    box-shadow: 2px 2px 1px 2px rgba(0, 0, 0, 0.485);
 }
 
-.courseimg{
-    width:40%;
+.courseImage{
+    border-radius: 10px;
+    width: 100%;
+    box-sizing: border-box;
 }
 
-.coursedetails{
-    width: 40%;
+.courseInfo{
     display: flex;
-    gap: 20px;
     flex-direction: column;
+    box-sizing: border-box;
+    padding: 0 2vw;
+}
+
+.courseName{
+    font-weight: 600;
+    font-size: 1.2vw;
+}
+
+.courseInstructor{
+    font-weight: 600;
+    color: #6c757d;
 }
 
 .courseActions{
-    width: 20%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 20px;
+    box-sizing: border-box;
+    padding: 0 2vw;
+    padding-bottom: 1vw;
+    gap: 5px;
+}
+
+.lineDiv{
+    background-color: orange;
+    width: 100%;
+    height: 1px;
+    visibility: hidden;
 }
 
 .coursebtns{
-    font-size: 17px;
-    padding: 1rem;
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
-    width: 100%;
-    background-color: bisque;
     border: none;
-}
-
-.coursebtns:hover{
-    cursor: pointer;
-}
-
-.S{
-    transition: 0.3s;
-}
-
-.S:hover{
-    background-color: red;
-    color: white;
-    
-}
-
-.coursePrice{
-    color: #346357c7;
-}
-
-.S{
-    color: red;
-    outline: 3px solid red;
+    color: orange;
     background-color: white;
+    font-weight: 600;
+    font-size: 1.2vw;
+    visibility: hidden;
 }

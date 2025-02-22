@@ -15,63 +15,98 @@ text {
   padding-right: 20px; /* Adjust padding as needed */
 }
 
-
-.budgetingtool{
+.mainExpenseTracker{
   display: flex;
+  flex-direction: column;
   background-image: linear-gradient(60deg, #171c22 0%, #0b1219 100%);
-  background-size: cover;
-  width: 100vw;
+  width: 100%;
+  overflow-x: hidden;
   color: white;
+  box-sizing: border-box;
 }
 
 .dashboard{
   display: flex;
   flex-direction: column;
-  margin: 2rem;
-  margin-top: 8rem;
-  gap: 2rem;
+  margin: 3vh;
+  gap: 20px;
+}
+
+.budgetCategories{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  box-sizing: border-box;
   width: 100%;
-  height: max-content;
-  padding: 1rem;
+}
+
+.budgetCategoryHeader{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.expensedetails{
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+
+.boxes{
+  outline: 1px solid #00e5ff;
+  border-radius: 10px;
+  padding: 1vw 2vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 33%;
+  transition: 0.2s;
+}
+
+.boxes:hover{
+  outline: 1px solid #6cf0ff;
+  box-shadow: 0px 0px 3px 4px grey;
+  cursor: pointer;
 }
 
 .piegau{
   display: flex;
-  gap: 1rem;
+  gap: 20px;
 }
 
+.chartboxes{
+  outline: 1px solid rgba(255, 255, 255, 0.384);
+  height: 50vh;
+  width: 50%;
+  padding: 1vw 2vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 0px 2px 2px #1f6f78;
+}
 
 .graphrep{
   display: flex;
-  gap: 1rem;
+  gap: 20px;
 }
 
 .barGraph{
+  padding: 1vw 2vw;
+  width: 50%;
+  height: 50vh;
   outline: 1px solid rgba(255, 255, 255, 0.458);
   box-shadow: 0px 0px 2px 2px #2b9daa;
 }
 
 .lineGraph{
+  padding: 1vw 2vw;
+  width: 50%;
+  height: 50vh;
   outline: 1px solid rgba(255, 255, 255, 0.458);
   box-shadow: 0px 0px 2px 2px #2b9daa;
 }
 
-
-.expensedetails{
-  display: flex;
-  gap: 1rem;
-  width: 100%;
-}
-
-.boxes{
-  outline: 1px solid rgba(255, 255, 255, 0.384);
-  padding: 2rem;
-  width: 33%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  box-shadow: 0px 0px 2px 2px #1f6f78;
-}
 
 .amount{
   display: flex;
@@ -94,25 +129,13 @@ text {
   width: 100%;
 }
 
-.chartboxes{
-  outline: 1px solid rgba(255, 255, 255, 0.384);
-  height: 100%;
-  width: 100%;
-  padding: 1rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  box-shadow: 0px 0px 2px 2px #1f6f78;
-}
 
 .table{
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 0.5rem;
-  /* padding: 1.5rem; */
+  gap: 10px;
   width: 100%;
-  height: max-content;
 }
 
 .tableheader{
@@ -120,15 +143,19 @@ text {
   justify-content: space-between;
 }
 
-.tableEditor{
+.tableHeading{
   display: flex;
-  gap: 1rem;
-  padding: 0.2rem;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
 }
 
-.Re{
-  background-color: red;
+.tableEditor{
+  display: flex;
+  gap: 10px;
+  padding: 1vw 2vw;
 }
+
 
 .Ad{
   background-image: linear-gradient(60deg, #171c22 0%, #0b1219 100%);
@@ -145,41 +172,38 @@ text {
 }
 
 .Re{
+  background-color: red;
+}
+
+.Re:hover{
   cursor: pointer;
 }
 
 .tableEditorButtons{
   border: none;
   color: white;
-  font-size: medium;
-  padding-left: 2rem;
-  padding-right: 2rem;
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-}
-
-
-
-.tab{
-  border-radius: 1rem;
+  font-size: 1.2vw;
+  padding: 0.5vw 1vw;
+  box-sizing: border-box;
+  font-weight: 600;
 }
 
 tr{
   display: flex;
   justify-content: center;
-  gap: 2rem;
+  gap: 1.5vw;
   color: white;
   outline: 1px solid rgba(255, 255, 255, 0.458);
   box-shadow: 0px 0px 2px 2px #1f6f78;
-  border-radius: 0.1rem;
+  border-radius: 3px;
 }
 
 td, th{
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100px;
-  padding: 1rem;
+  width: 6vw;
+  padding: 1.1vw;
 }
 
 tr:hover{
@@ -187,7 +211,7 @@ tr:hover{
   background-image: linear-gradient(60deg, #323d4b8f 0%, #33495e97 100%);
 }
 
-.expenseformback{
+.expenseformback {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -197,127 +221,129 @@ tr:hover{
   background-color: #0b121992;
   backdrop-filter: blur(5px);
   z-index: 2;
-  justify-content: center;
-  align-items: center;
 }
 
-.expenseForm{
+.expenseForm {
   position: relative;
-  padding: 2rem;
+  padding: 3vh 4vw; /* Added more padding for spacing */
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  gap: 1.5rem;
-  width: 25vw;
-  height: max-content;
+  gap: 2vw; /* Increased gap for more spacing between elements */
+  width: 30vw; /* Slightly increased width for more space */
+  height: auto;
   backdrop-filter: blur(9px);
   border: none;
   outline: 1px solid white;
-  box-shadow: 0px 0px 3px 3px #b07d2676;
+  box-shadow: 0px 0px 5px 3px #b07d2676;
+  border-radius: 0.5rem; /* Added rounded corners */
 }
 
-.expenseFormHeader{
+.expenseFormHeader {
   display: flex;
   justify-content: space-between;
 }
 
-.productName{
+.formInput {
   width: 100%;
-  padding: auto;
+  box-sizing: border-box;
+  padding: 1vw; /* Increased padding for better input field size */
+  color: white;
+  border: none;
+  outline: 1px solid rgba(255, 255, 255, 0.458);
+  background-color: transparent;
 }
 
-.amount{
-  width: 100%;
-  padding: auto;
+.formInput:focus {
+  box-shadow: 0px 0px 3px 2px #2b9daa;
+  background-color: #22282f;
 }
 
-.categorySelection{
+.categorySelection {
   position: relative;
 }
 
-.optionsLabel{
+.optionsLabel {
   display: flex;
   justify-content: space-between;
   outline: 1px solid rgba(255, 255, 255, 0.458);
-  padding: 0.5rem;
+  padding: 0.5vw 2vw;
   border-radius: 0.3rem;
-  margin-bottom: 0.5rem;
+  /* margin-bottom: 1.5vh; Increased margin for better spacing */
   transition: box-shadow background-color 0.3s;
 }
 
-.optionsLabel:hover{
+.optionsLabel:hover {
   background-color: #22282fd8;
-}
-
-.optionsLabel:focus{
-  background-color: #22282f;
-  box-shadow: 0px 0px 3px 2px #2b9daa;
-}
-
-
-
-.formInput:focus{
-  box-shadow: 0px 0px 3px 2px #2b9daa;
-  background-color: #22282f;
-}
-
-.optionsLabel:hover{
   cursor: pointer;
 }
 
-.catOptions{
-  position: absolute;
-  width: 100%;
-  left: 0;
-  box-sizing: border-box;
+.optionsLabel:focus {
   background-color: #22282f;
-  backdrop-filter: blur(1000px);
+  box-shadow: 0px 0px 3px 2px #2b9daa;
+}
+
+.catOptions {
+  width: 100%;
+  background-color: #22282f;
+  backdrop-filter: blur(5px);
   outline: 1px solid rgba(255, 255, 255, 0.458);
-  padding: 0.5rem;
+  padding: 0.5vw 1vw;
   border-radius: 0.3rem;
   overflow-y: auto;
-  height: 100%;
+  max-height: 20vh; /* Increased max-height to ensure the dropdown stays within the form */
+  box-sizing: border-box;
+  z-index: 3; /* Ensure the dropdown stays on top */
 }
 
-ul{
+.catOptions ul {
   padding: 0;
+  margin: 0;
 }
 
-li{
+.catOptions li {
   list-style-type: none;
-  padding: 0.5rem;
+  padding: 0.5vw;
 }
 
-li:hover{
+.catOptions li:hover {
   cursor: pointer;
   background-color: #0b121992;
   border-radius: 0.3rem;
 }
 
-.newExpense{
-  padding: 0.5rem;
+/* .productName, */
+.expenseAmount {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.newExpense {
+  padding: 0.5vw 3vw;
   background-color: #0b1219;
   color: white;
   border: none;
-  outline: px solid rgba(255, 255, 255, 0.458);
+  outline: 1px solid rgba(255, 255, 255, 0.458);
   box-shadow: 0px 0px 3px 2px #2b9daa;
   font-weight: bold;
-  font-size: large;
+  font-size: 1.2rem;
   transition: background-color 0.3s;
 }
 
-.newExpense:hover{
+.newExpense:hover {
   cursor: pointer;
   background-color: #18a38e;
   box-shadow: 0px 0px 3px 2px #0b121992;
 }
 
-.closeBtn{
-  transition: box-shadow  0.3s, background-color 0.3s;
+.closeBtn {
+  transition: box-shadow 0.3s, background-color 0.3s;
 }
 
-.closeBtn:hover{
+.closeBtn:hover {
   cursor: pointer;
   box-shadow: 0px 0px 3px 2px #ff0000c6;
   background-color: #ff00005b;
 }
+
